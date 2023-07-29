@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Collage website</title>
+        <link rel="stylesheet" href="style.css">
+        
+        <script>
+            /*Function to image slider*/
+
+            var a=["clg1.jpeg","clg2.jpeg","clg3.jpeg","clg4.jpg"];
+            count=1;
+            function nxt()
+            {
+                i=document.getElementById("imgscroll");
+                while(count<a.length)
+                {
+                    i.style.backgroundImage = "url(" +a[count]+ ")";
+                    count++;
+                    break;
+                }   
+                
+            }
+            function pre()
+            {
+                i=document.getElementById("imgscroll");
+
+                k=count-2;
+                while(k>=0)
+                {
+                    i.style.backgroundImage = "url(" +a[k]+ ")";
+                    count--;
+                    break;
+                }
+            }
+
+        </script>
+        
+    </head>
+    <body>
+        <div>
+            <header>
+                <div id="headdiv">
+                    <a href="#a" id="headdiv_anc">Sports</a>
+                    <a href="#a" id="headdiv_anc">News</a>
+                    <a href="#a" id="headdiv_anc">Events</a>
+                    <a href="#a" id="headdiv_anc">Affiliation</a>
+                    <a href="#a" id="headdiv_anc">Library</a>
+                    <a href="#a" id="headdiv_anc">Contact us</a>
+                    <a href="loginpage.html" id="headdiv_anc">Student Login</a>
+
+
+                </div>
+
+            </header>
+            <div id="div1">
+                <section id="accredation">
+                    <img src="aicte.png" alt="">
+                    <img src="nba.png" alt="">
+
+                </section>
+                <section id="clglogo">
+                    <h2>University Name</h2>
+                    <img src="clglogo.png" alt="">
+                </section>
+            </div>
+            <nav id="nav1">
+                <a href="Index.html">Home</a>
+                <a href="#b">About us</a>
+                <a href="#c">Academics</a>
+                <a href="#d">Placement</a>
+                <a href="#e">Research</a>
+                <a href="#e">Facilities</a>
+                <a href="#e">NAAC</a>
+                <a href="#e">Admissions</a>
+                <a href="#e">Mandatory disclosure</a>
+                <a href="#e">Counselling code</a>
+                <a href="resultscheck.html">Exam Results</a>
+                <a href="Registration.html">Registration</a>
+
+            </nav>
+            <section id="imgscroll" >
+                <img src="Prev.png" alt="" id="prev" onclick="pre()">
+                <img src="next.png" alt="" id="next" onclick="nxt()">
+
+            </section>
+
+            <aside id="asidecontent">
+                <ol>
+                    <li>Suceessful Alumini</li>
+                    <li>University rank holders</li>
+                    <li>Excellent Placement</li>
+                    <li>Suceessful Alumini</li>
+                    <li>University rank holders</li>
+                    <li>Excellent Placement</li>
+                    <li>Suceessful Alumini</li>
+                    <li>University rank holders</li>
+                    <li>Excellent Placement</li>
+                    
+
+                </ol>
+
+            </aside>
+            <section id="announcement">
+                <article>
+                    <h1>Announcement</h1>
+                        <marquee behavior="scroll" direction="up" onmouseover="stop()" onmouseout="start()">
+                            <p>
+                                Theory Timetable for the Apr/May-2023 Examination<br>
+                                 University Theory Timetable for the Nov/Dec-2022<br>
+                                Theory Timetable for the Apr/May-2023 Examination<br>
+                                 University Theory Timetable for the Nov/Dec-2022<br>
+                                Theory Timetable for the Apr/May-2023 Examination<br>
+                                 University Theory Timetable for the Nov/Dec-2022<br>
+                                Theory Timetable for the Apr/May-2023 Examination<br>
+                                 University Theory Timetable for the Nov/Dec-2022<br>
+                                Theory Timetable for the Apr/May-2023 Examination<br>
+                                Theory Timetable for the Apr/May-2023 Examination<br>
+                                 University Theory Timetable for the Nov/Dec-2022<br>
+                                Theory Timetable for the Apr/May-2023 Examination<br>
+                                 University Theory Timetable for the Nov/Dec-2022<br>
+                                Theory Timetable for the Apr/May-2023 Examination<br>
+                                 University Theory Timetable for the Nov/Dec-2022<br>
+                                Theory Timetable for the Apr/May-2023 Examination<br>
+                                 University Theory Timetable for the Nov/Dec-2022<br>
+                                Theory Timetable for the Apr/May-2023 Examination<br>
+                            </p>
+                        </marquee>
+
+                </article>
+            </section>
+            <section id="imgsection1">
+                <h1>Our Latest Courses</h1>
+                <img src="Artificial_intelligence.jpg" alt="" >
+                <img src="Data_Science.jpg" alt="">
+                <img src="machine_learning.jpg" alt="">
+
+            </section>
+            <section id="vidsection">
+                <h1>Press videos</h1>
+                <iframe src="https://www.youtube.com/embed/UEahQP9moaQ">
+
+                </iframe>
+                <iframe src="https://www.youtube.com/embed/UEahQP9moaQ">
+
+                </iframe>
+                <iframe src="https://www.youtube.com/embed/UEahQP9moaQ">
+
+                </iframe>
+                <iframe src="https://www.youtube.com/embed/UEahQP9moaQ">
+
+                </iframe>
+                <iframe src="https://www.youtube.com/embed/UEahQP9moaQ">
+
+                </iframe>
+                <iframe src="https://www.youtube.com/embed/UEahQP9moaQ">
+
+                </iframe>
+
+            </section>
+
+
+            <footer>
+                <h4>Copyright &copy 2023</h4>
+
+            </footer>
+        </div>
+    </body>
+</html>

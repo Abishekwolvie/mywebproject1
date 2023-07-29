@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Loginpage
+        </title>
+        <link rel="stylesheet" href="Studentregstyle.css">
+        <script>
+            function chk()
+            {
+                t=document.getElementById("fname");
+                s=document.getElementsByTagName("span");
+                m=document.getElementById("mobno");
+                t1=document.getElementById("lname");
+                db=document.getElementById("dob");
+                e=document.getElementById("mail");
+                gen=document.getElementsByName("g");
+                slctcity=document.getElementById("sel");
+                sltstate=document.getElementById("selstate");
+                pincode=document.getElementById("pin");
+
+                if(t.value=="")
+                {
+                    s[0].innerHTML="Enter the name";
+                    t.focus();
+                    s[0].style.color="red";
+                    return false;
+                }
+                else if(t1.value=="")
+                {
+                    s[1].innerHTML="Enter the last name";
+                    t1.focus();
+                    s[1].style.color="red";
+                    return false;
+                }
+                else if(db.value=="")
+                {
+                    s[2].innerHTML="Enter the date of birth";
+                    t1.focus();
+                    s[2].style.color="red";
+                    return false;
+
+                }
+                else if(m.value=="")
+                {
+                    s[3].innerHTML="Enter the number";
+                    m.focus();
+                    s[3].style.color="red";
+                    return false;
+
+                }
+                else if(e.value=="")
+                {
+                    s[4].innerHTML="Enter the email";
+                    e.focus();
+                    s[4].style.color="red";
+                    return false;
+
+                }
+                else if(gen[0].checked==false && gen[1].checked==false)
+                {
+                    s[5].innerHTML="Select the gender";
+                    s[5].style.color="red";
+                    return false;
+                }
+                else if(slctcity.value=="" || slctcity.value=="--Select the district--")
+                {   
+                    s[6].innerHTML="Select the city";
+                    s[6].style.color="red";
+                    return false;
+                 
+
+                }
+                else if(sltstate.value=="" || sltstate.value=="--Select the State--")
+                {
+                    s[7].innerHTML="Select the State";
+                    s[7].style.color="red";
+                    return false;
+
+                }
+                else if(pincode.value=="")
+                {
+                    s[8].innerHTML="Enter the Pincode";
+                    s[8].style.color="red";
+                    return false;
+                }
+            }
+        </script>
+
+    </head>
+    <body>
+        <div>
+            <header>
+                <div id="headdiv">
+                    <a href="#a" id="headdiv_anc">Sports</a>
+                    <a href="#a" id="headdiv_anc">News</a>
+                    <a href="#a" id="headdiv_anc">Events</a>
+                    <a href="#a" id="headdiv_anc">Affiliation</a>
+                    <a href="#a" id="headdiv_anc">Library</a>
+                    <a href="#a" id="headdiv_anc">Contact us</a>
+                    <a href="Index.html" id="headdiv_anc">Logout</a>
+
+
+                </div>
+
+            </header>
+            <div id="div1">
+                <section id="accredation">
+                    <img src="aicte.png" alt="">
+                    <img src="nba.png" alt="">
+
+                </section>
+                <section id="clglogo">
+                    <h2>University Name</h2>
+                    <img src="clglogo.png" alt="">
+                </section>
+            </div>
+            <nav id="nav1">
+                <a href="Index.html">Home</a>
+                <a href="#b">About us</a>
+                <a href="#c">Academics</a>
+                <a href="#d">Placement</a>
+                <a href="#e">Research</a>
+                <a href="#e">Facilities</a>
+                <a href="#e">NAAC</a>
+                <a href="#e">Admissions</a>
+                <a href="#e">Mandatory disclosure</a>
+                <a href="#e">Counselling code</a>
+            </nav>
+            <section id="resloginsection">
+                <div id="studentregdiv">
+                    <form action="Sample.html" name="form1" onsubmit="return chk()">
+                        <label>First Name</label><input type="text" id="fname">
+                        <br>
+                        <span ></span>
+                        <br>
+                        <label>Last Name</label><input type="text" id="lname">
+                        <br>
+                        <span ></span>
+                        <br>
+                        <label >Date of birth</label><input type="date" id="dob">
+                        <br>
+                        <span></span>
+                        <br>
+                        <label>Mobile no</label><input type="text" id="mobno" pattern="^[6-9]{1}[0-9]{9}$">
+                        <br>
+                        <span ></span>
+                        <br>
+                        <label>Email id</label><input type="email" id="mail" >
+                        <br>
+                        <span ></span>
+                        <br>
+                        <label>Sex</label> <input type="radio" name="g">Male
+                        <input type="radio" name="g">Female
+                        <br>
+                        <span ></span>
+                        <br>
+                        <label>City</label>
+                        <select id="sel">
+                        <option >--Select the district--</option>
+                        <option value="Chennai">Chennai</option>
+                        <option value="Kancheepuram">Kancheepuram</option>
+                        <option value="Trichy">Trichy</option>
+                        <option value="Coimbatote">Coimbatote</option>
+                        <option value="Madurai">Madurai</option>
+                        <option value="Salem">Salem</option>
+                        </select>
+                        <br>
+                        <span></span>
+                        <br>
+                        <Label>State</Label>
+                        <select id="selstate">
+                        <option >--Select the State--</option>
+                        <option value="Tamil Nadu">Tamil Nadu</option>
+                        <option value="Andhra">Andhra</option>
+                        <option value="Kerla">Kerla</option>
+                        </select>
+                        <span></span>
+                        <br>
+                        <Label>PinCode</Label>
+                        <input type="text" pattern="^[1-9]{1}[0-9]{5}$" id="pin">
+                        <span></span>
+                        <br>
+                        <input type="submit" value="Next">
+            
+            
+                    </form>
+
+                </div>
+
+            </section>
+            <footer>
+                <h4>Copyright &copy 2023</h4>
+
+            </footer>
+
+        </div>
+    </body>
+</html>
